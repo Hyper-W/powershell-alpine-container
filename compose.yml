@@ -1,0 +1,13 @@
+services:
+  pwsh:
+    build:
+      context: .
+      args:
+        - PSVersionMajor=${PSVersionMajor:-7} # Powershell Major Version. Exclusive: PSVersion. Dependence: PSVersionMinor,PSVersionPatch.
+        - PSVersionMinor=${PSVersionMinor:-4} # Powershell Minor Version. Exclusive: PSVersion. Dependence: PSVersionMajor,PSVersionPatch.
+        - PSVersionPatch=${PSVersionPatch:-2} # Powershell Patch Version. Exclusive: PSVersion. Dependence: PSVersionMajor,PSVersionMinor.
+        # - PSVersion=${PSVersionMajor:-7}.${PSVersionMinor:-4}.${PSVersionPatch:-2} # Exclusive: PSVersionMajor,PSVersionMinor,PSVersionPatch.
+    image: pwsh:alpine
+    container_name: pwsh
+    tty: true
+    entrypoint: ["pwsh"]
