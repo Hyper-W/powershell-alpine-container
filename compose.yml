@@ -7,7 +7,7 @@ services:
         - PSVersionMinor=${PSVersionMinor:-4} # Powershell Minor Version. Exclusive: PSVersion. Dependence: PSVersionMajor,PSVersionPatch.
         - PSVersionPatch=${PSVersionPatch:-2} # Powershell Patch Version. Exclusive: PSVersion. Dependence: PSVersionMajor,PSVersionMinor.
         # - PSVersion=${PSVersionMajor:-7}.${PSVersionMinor:-4}.${PSVersionPatch:-2} # Exclusive: PSVersionMajor,PSVersionMinor,PSVersionPatch.
-    image: pwsh:alpine
+    image: ghcr.io/hyper-w/powershell-alpine-container/pwsh:alpine
     container_name: pwsh
     tty: true
     entrypoint: ["pwsh"]
