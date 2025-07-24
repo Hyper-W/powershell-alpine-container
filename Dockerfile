@@ -1,6 +1,6 @@
 ARG PSVersionMajor=7
 ARG PSVersionMinor=4
-ARG PSVersionPatch=2
+ARG PSVersionPatch=11
 ARG PSVersion="${PSVersionMajor}.${PSVersionMinor}.${PSVersionPatch}"
 ARG PSVersionMajor="${PSVersion/.*}"
 
